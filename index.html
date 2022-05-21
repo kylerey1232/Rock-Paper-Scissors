@@ -7,6 +7,42 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    
+    <script>
+        let list = ["Rock","Paper","Scissors"]
+        function computerPlay(){
+            return list[Math.floor(Math.random() * list.length)];
+        } 
+        function playround(playerSelection, computerSelection){
+            if (playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "rock"){
+                return "TIE!";
+            } 
+            else if (playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "paper"){
+                return "TIE!";
+            } 
+            else if (playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "scissors"){
+                return "TIE!";
+            } 
+            else if (playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "rock"){
+                return "You Lose! Rock Beats Scissors";
+            } 
+            else if (playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "paper"){
+                return "You Win! Scissors Beats Paper";
+            } 
+            else if (playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "scissors"){
+                return "You Lose! Scissors Beats Paper";
+            } 
+            else if (playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "rock"){
+                return "You Win! Paper Beats Rock";
+            } 
+            else if (playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "scissors"){
+                return "You Win! Rock Beats Scissors";
+            } 
+            else if (playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "scissors"){
+                return "You Lose! Scissors Beats Rock";
+            } 
+            else {"something went wrong!"};
+        }
+        
+    </script>
 </body>
 </html>
