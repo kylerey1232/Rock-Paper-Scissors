@@ -18,20 +18,17 @@
             
             if (playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "rock"){
                 console.log("TIE!");
-                ++computerscore;
-                ++playerscore;
+               
             
             } 
             else if (playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "paper"){
                 console.log("TIE!");
-                ++computerscore;
-                ++playerscore;
+                
             
             } 
             else if (playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "scissors"){
                 console.log("TIE!");
-                ++computerscore;
-                ++playerscore;
+               
                 
             } 
             else if (playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "rock"){
@@ -69,10 +66,7 @@
         function game (){
             for (let i = 0; i<5; i++){
                 let playerSelection = prompt ("Rock, Paper, or Scissors?")
-                console.log(playround(playerSelection, computerPlay()));
-                console.log((playerscore));
-                console.log((computerscore));
-                
+                playround(playerSelection, computerPlay());    
             }
             return declareWinner();
         }
